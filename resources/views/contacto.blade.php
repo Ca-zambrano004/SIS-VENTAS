@@ -46,6 +46,7 @@
                   </div>
                  </div>
               </div>
+              Ingresa a más tutoriales en <a href="{{ $link ?? '' }}">{{ $link ?? '' }}</a>
               <div class="form-group">
                 <label for="exampleMessage" class="bmd-label-floating">Mensaje...</label>
                 <textarea type="text" class="form-control" rows="4" id="exampleMessage" required="">Cordial saludo! </textarea>

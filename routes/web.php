@@ -22,9 +22,10 @@ Route::post('/cart', 'CartDetailController@store'); //gestionar carrito de compr
 Route::delete('/cart', 'CartDetailController@destroy'); //elim. produ. de carrito de compras
 
 Route::post('/orden', 'CartController@update'); //gestionar compras
+Route::post('/carlos', 'CartController@update'); //gestionar compras
 
 
-Route::middleware(['auth','admin'])->prefix('admin')->namespace('Admin')->group(function() {
+Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group(function () {
 
 	Route::get('/productos', 'ProductoController@index'); //listado de productos
 	Route::get('/productos/create', 'ProductoController@create'); //furmulario de registro 
@@ -44,5 +45,5 @@ Route::middleware(['auth','admin'])->prefix('admin')->namespace('Admin')->group(
 	Route::get('/categorias/{categoria}/edit', 'CategoryController@edit'); //furmulario de edicion
 	Route::post('/categorias/{categoria}/edit', 'CategoryController@update'); //registrar los datos editados
 	Route::post('/categorias/{categoria}/delete', 'CategoryController@destroy'); //furmulario de eliminacion
-	
+
 });

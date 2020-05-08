@@ -32,9 +32,11 @@
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
             <h2 class="title">Aeroshop <br>Si lo quieres ¡Lo tienes!</h2>
-            <h5 class="description">Estamos revolucionando el mundo. Pide todo lo que quieras y necesites para ti o tu hogar. encuéntralo en pocos clics y las 24 horas del día, con servicio de entrega nacional. En SofySHOP contamos con mas de 2 mil productos divididos en 5 categorías: hogar, accesorios, deportes, tecnologia y belleza. <br>
-
-            Regístrate y descubre el mundo de la compra online sin moverte de tu casa con SofySHOP.
+            <h5 class="description">Estamos revolucionando el mundo. Pide todo lo que quieras y necesites
+               para ti o tu hogar. encuéntralo en pocos clics y las 24 horas del día, con servicio de 
+               entrega nacional. En Aeroshop contamos con mas de 2 mil productos divididos 
+               en 5 categorías: hogar, accesorios, deportes, tecnologia y belleza. <br>
+            Regístrate y descubre el mundo de la compra online sin moverte de tu casa con Aeroshop.
           </h5>
           </div>
         </div>
@@ -46,7 +48,7 @@
                   <i class="material-icons">https</i>
                 </div>
                 <h4 class="info-title">Paga con tarjeta o en efectivo</h4>
-                <p>En SofySHOP, paga desde la comodidad de tu casa con pagos contra entrega y de igual forma desde tu banco de confianza o hazlo con efectivo en puntos de pago Efecty o PayPal . ¡Y siempre es seguro!.</p>
+                <p>En Aeroshop, paga desde la comodidad de tu casa con pagos contra entrega y de igual forma desde tu banco de confianza o hazlo con efectivo en puntos de pago Efecty o PayPal . ¡Y siempre es seguro!.</p>
               </div>
             </div>
             <div class="col-md-4">
@@ -55,7 +57,7 @@
                   <i class="material-icons">verified_user</i>
                 </div>
                 <h4 class="info-title">Seguridad, de principio a fin</h4>
-                <p>¿No te gusta? ¡Devuélvelo! SofySHOP, no hay nada que no puedas hacer, porque todas tus compras estan siempre protegidas..</p>
+                <p>¿No te gusta? ¡Devuélvelo! Aeroshop, no hay nada que no puedas hacer, porque todas tus compras estan siempre protegidas..</p>
               </div>
             </div>
             <div class="col-md-4">
@@ -64,7 +66,7 @@
                   <i class="material-icons">add_shopping_cart</i>
                 </div>
                 <h4 class="info-title">Envio Gratis</h4>
-                <p>Con solo estar registrado en SofySHOP, tienes envíos gratis en todos nuestros productos con compras efectivas desde $100.000 pesos..</p>
+                <p>Con solo estar registrado en Aeroshop, tienes envíos gratis en todos nuestros productos con compras efectivas desde $100.000 pesos..</p>
               </div>
             </div>
           </div>                

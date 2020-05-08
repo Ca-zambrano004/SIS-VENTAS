@@ -16,9 +16,18 @@ class UserstableSeeder extends Seeder
     {
          DB::table('users')->insert([
             'name' => 'carlos zambrano',
-            'email' => Str::random(10).'@gmail.com',
-            'password' => Hash::make('123123'),
-            'admin'=> true
+            'email' => 'carlos@gmail.com',
+            'password' => Hash::make('123'),
+            'rol'=> 1
+
         ]);
+         DB::table('users')->insert([
+            'name' => 'carlos zambrano',
+            'email' => 'zambrano@gmail.com',
+            'password' => Hash::make('123'),
+            'rol'=> false
+
+        ]);
+        
     }
 }

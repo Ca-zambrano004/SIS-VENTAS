@@ -17,11 +17,10 @@
     <div class="container" >
       <div class="row">
         <div class="col-md-12 ml-auto mr-auto" align="right" >
-          <h1 class="title" >SofySHOP</h1>
-         
+          <h1 class="title">SofySHOP</h1>
           <br>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-danger btn-raised btn-lg">
-            <i class="fa fa-play"></i>Ver Tutorial
+          <a href="https://www.youtube.com/watch?v=ZGrarm9tX1s" target="_blank" class="btn btn-danger btn-raised btn-lg">
+            <i class="fa fa-play"></i> Ver Tutorial
           </a>
         </div>
       </div>
@@ -68,93 +67,46 @@
                 <p>Con solo estar registrado en SofySHOP, tienes envíos gratis en todos nuestros productos con compras efectivas desde $100.000 pesos..</p>
               </div>
             </div>
+          </div>                
+        </div>
+  
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <h2 class="title">CATEGORIAS DISPONIBLES</h2>
+           <form class="form-inline ml-auto" method="get" action="{{ url('/busquedas')}}">
+           <div class="col-md-12 ml-auto mr-auto">
+            <input type="text" class="form-control" placeholder="¿Que Producto Buscas?" name="busqueda" id="busqueda">
+              <button type="submit" class="btn btn-primary btn-just-icon btn-round">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </form> 
           </div>
         </div>
-      </div>
-      <div class="section text-center">
-        <h2 class="title">Productos Disponibles</h2>
+      <br>
         <div class="team">
           <div class="row">
-            @foreach($Productos as $Producto)
+            @foreach($categoria as $category)
             <div class="col-md-4">
               <div class="team-player">
-                 <img src="{{ $Producto->destacada_image_url}}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                     <h4 class="card-title">
-                      <a href="{{ url('/Producto/'.$Producto->id) }}">{{$Producto->nombre}} </a>
-                      <br>
-                      <small class="card-description text-muted">{{$Producto->category->nombre}}</small>
-                    </h4>
+                 <img src="{{ $category->destacada_image_url}}"  alt="Imagen principal de la categoria {{ $category->nombre }}" class="img-raised rounded-circle img-fluid">
+                  <h4 class="card-title">  
+                    <a href="{{ url('/categorias/'.$category->id) }}" rel="tooltip" title="Ver Productos de la Categoria: {{ $category->nombre }}"> {{$category->nombre}} </a> 
+                  </h4>
                     <div class="card-body">
-                    <p class="card-description">{{$Producto->descripcion}}</p>
+                    <p class="description">{{$category->descripcion}}</p>
                     </div>
                 </div>
               </div>  
             @endforeach
             </div>
           </div>
-          <div class="row">
-             {{ $Productos->links() }}
-          </div>
-        </div>
-      </div>
-      <div class="section section-contacts">
-        <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
-            <div class="info">
-            <div class="icon icon-info" align="center">
-               <i class="material-icons" >contact_mail</i> <br><font SIZE=10 FACE="times new roman" align="center" color="#5A5655">Contactanos</font><br>
-               <font SIZE=4 FACE="times new roman" align="center" color="#5A5655">Tu opinión es muy importante, por eso trabajamos para mejorar cada día.</font>
-            </div>
-            </div>
-            <h4 class="text-center description">Para SofySHOP es muy importante conocer la percepción de servicio que tienen nuestros clientes sobre los diferentes productos que ofrecemos..
-            </h4>
-            <form class="contact-form">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Nombre</label>
-                    <input  class="form-control" type="text" required="" maxlength="40">
-                  </div>
-                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Telefono</label>
-                    <input type="number" pattern="[0-9+]{1,15}" class="form-control">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Correo electronico</label>
-                    <input type="email" class="form-control" required="" maxlength="40">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Asunto</label>
-                    <input  class="form-control" type="text" required="" maxlength="40">
-                  </div>
-                 </div>
-              </div>
-              <div class="form-group">
-                <label for="exampleMessage" class="bmd-label-floating">Mensaje...</label>
-                <textarea type="text" class="form-control" rows="4" id="exampleMessage" required="">Cordial saludo! </textarea>
-              </div>
-              <div class="row">
-                <div class="col-md-4 ml-auto mr-auto text-center">
-                  <button class="btn btn-primary btn-raised">
-                    ENVIAR MENSAJE
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
       </div>
     </div>
-  </div>
-
-
+    </div>
 
 @include('includes.footer')
 
 @endsection
+

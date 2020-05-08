@@ -12,6 +12,7 @@
   <!--     Fonts and icons   -->  
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
 
@@ -37,20 +38,22 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
+     
           @guest
             <li class="nav-item">
               <a class="nav-link" href="{{ route('login') }}">{{ __('INGRESAR') }}</a>
             </li>
+            
           @if (Route::has('register'))
             <li class="nav-item">
               <a class="nav-link" href="{{ route('register') }}">{{ __('REGISTRO') }}</a>
             </li>
           @endif
-          @else
 
+          @else
             <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-              {{ Auth::user()->name }} <span class="caret"></span>
+             Menú de Usuario<span class="caret"></span>
             </a>
               <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   
@@ -59,12 +62,26 @@
                          Home
                       </a>
                   </li>
-                  @if(auth()->user()->admin)
+
+                  <li>
+                      <a class="dropdown-item" href="{{ url('/productos') }}">
+                         Ver Productos
+                      </a>
+                  </li>
+
+                  @if(auth()->user()->rol)
+
                   <li>
                       <a class="dropdown-item" href="{{ url('/admin/productos') }}">
                          Gestionar Productos
                       </a>
                   </li>
+                  <li>
+                      <a class="dropdown-item" href="{{ url('/admin/categorias') }}">
+                         Gestionar Categorias
+                      </a>
+                  </li>
+                 
                   @endif
                   <li>
                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -76,28 +93,18 @@
                         @csrf
                       </form>
                   </li>
+                  
               </ul>
             </li>
+            <li class="nav-item">
+                 <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/cuenta') }}"data-original-title="{{ Auth::user()->name }}"> 
+                  <img src="{{ asset ('assets/img/avatar.png') }}" alt="Imagen principal de la categoria" class="rounded" class="img-responsive" width="50">    
+                 </a>
+            </li>
           @endguest
-          
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com" target="_blank" data-original-title="Follow us on Twitter" rel="nofollow">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com" target="_blank" data-original-title="Like us on Facebook" rel="nofollow">
-              <i class="fa fa-facebook-square"></i>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com" target="_blank" data-original-title="Follow us on Instagram" rel="nofollow">
-              <i class="fa fa-instagram"></i>
-            </a>
-          </li>
-
+             <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/contacto') }}"data-original-title="contacto">{{ __('Contacto') }}</a>
+          </li> 
         </ul>
       </div>
     </div>
@@ -106,10 +113,9 @@
    
     @yield ('contenido')
     
- 
     </div>
 
- 
+ </body>
   <!--   Core JS Files   -->
   <script src="{{ asset ('assets/js/core/jquery.min.js') }}" type="text/javascript"></script>
   <script src="{{ asset ('assets/js/core/popper.min.js') }}" type="text/javascript"></script>
@@ -125,6 +131,7 @@
   <!--  Google Maps Plugin    -->
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script src="{{ asset ('assets/js/material-kit.js') }}" type="text/javascript"></script>
-</body>
+  
+ 
 
 </html>

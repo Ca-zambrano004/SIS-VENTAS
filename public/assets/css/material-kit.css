@@ -15153,8 +15153,8 @@ textarea {
 .pagination>.page-item.active>span,
 .pagination>.page-item.active>span:focus,
 .pagination>.page-item.active>span:hover {
-  background-color: #9B11E8;
-  border-color: #9B11E8;
+  background-color: #9c27b0;
+  border-color: #9c27b0;
   color: #ffffff;
   box-shadow: 0 4px 5px 0 rgba(156, 39, 176, 0.14), 0 1px 10px 0 rgba(156, 39, 176, 0.12), 0 2px 4px -1px rgba(156, 39, 176, 0.2);
 }
@@ -15165,8 +15165,8 @@ textarea {
 .pagination.pagination-info>.page-item.active>span,
 .pagination.pagination-info>.page-item.active>span:focus,
 .pagination.pagination-info>.page-item.active>span:hover {
-  background-color: #9b11e8;
-  border-color: #9b11e8;
+  background-color: #00bcd4;
+  border-color: #00bcd4;
   box-shadow: 0 4px 5px 0 rgba(0, 188, 212, 0.14), 0 1px 10px 0 rgba(0, 188, 212, 0.12), 0 2px 4px -1px rgba(0, 188, 212, 0.2);
 }
 
@@ -19089,7 +19089,5 @@ footer .pull-center {
     width: 245px;
   }
 }
-
-
 
 /*# sourceMappingURL=kit-free.css.map */

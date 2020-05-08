@@ -20,13 +20,13 @@ class ProductoTableSeeder extends Seeder
  
 
 
-    $categories = factory(Category::class, 5)->create();
+    $categories = factory(Category::class, 2)->create();
     $categories->each(function ($category) {
-        $productos= factory(Producto::class, 20)->make();
+        $productos= factory(Producto::class, 2)->make();
         $category->productos()->saveMany($productos);
         
         $productos->each(function ($produ) {
-            $imagenes = factory(ProductoImagen::class, 5)->make();
+            $imagenes = factory(ProductoImagen::class, 1)->make();
             $produ->imagenes()->saveMany($imagenes);
 
         });

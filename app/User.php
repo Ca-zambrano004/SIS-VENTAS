@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'telefono', 'direccion'
     ];
 
     /**
@@ -36,4 +37,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function carts()
+    {
+       return $this->hasMany(Cart::class);
+    }
+
+        //cart_id
+    public function getCartAttribute()
+    {
+        $cart = $this->carts()->where('estado', 'Activo')->first();
+        if($cart)
+            return $cart;
+
+        //else
+        $cart = new Cart();
+
+        $cart->estado = 'Activo';
+        $cart->user_id = $this->id;
+        $cart->save();
+        
+        return $cart;
+ 
+
+    }
 }

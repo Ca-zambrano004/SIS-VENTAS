@@ -15,8 +15,8 @@ class CreateCartsTable extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('fecha_orden');    
-            $table->date('fecha_llegada');
+            $table->date('fecha_orden')->nullable();    
+            $table->date('fecha_llegada')->nullable();
             $table->string('estado'); //activo - pendiente - aprovado - cancelado - finalizado
               //FK
             $table->unsignedBigInteger('user_id');

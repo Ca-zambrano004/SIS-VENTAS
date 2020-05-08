@@ -1,0 +1,17 @@
+Panel de control cPanel: 
+
+Dirección: http://www.oogcghku.lucusvirtual.es/cpanel
+Usuario: rfvbewll
+Contraseña: T*[WYt25B4uge2
+
+
+
+Base de datos
+DB_DATABASE=rfvbewll_sis-venta
+DB_USERNAME=rfvbewll_sisventa
+DB_PASSWORD=f3vqL9B6rtZs.9Y
+
+Privilegios de carpetas
+vendor:0777
+storage:0777
+bootstrap:0777

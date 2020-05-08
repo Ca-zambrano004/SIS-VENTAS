@@ -15,8 +15,8 @@ class CreateCartDatailsTable extends Migration
     {
         Schema::create('cart_datails', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->intenger('cantidad');
-            $table->intenger('descuento');
+            $table->unsignedBigInteger('cantidad');
+            $table->unsignedBigInteger('descuento')->default(0);
               //FK
             $table->unsignedBigInteger('cart_id');
             $table->foreign('cart_id')->references('id')->on('carts');

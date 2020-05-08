@@ -9,7 +9,7 @@ class Producto extends Model
 	//$producto->category
     public function category()
     {		
-        //un producto tiene una categoria
+        //un producto pertenece a una categoria
     	return $this->belongsTo(Category::class);
     }
 
@@ -33,7 +33,7 @@ class Producto extends Model
 
         // MOSTRAR UNA IMAGEN POR DEFECTO
 
-        return '/imagenes/productos/default.jpg';
+        return '/imagenes/default.jpg';
     }
 
 }

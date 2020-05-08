@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
-use App\Producto;
-use App\ProductoImagen;
+use App\Category;
+
+
 
 class TestController extends Controller
 {
    public function welcome(){
 
-   	 $Productos = Producto::paginate(9);
-   	return view ("welcome")->with(compact('Productos'));
+   	 $categoria = Category::has('productos')->get();
+   	return view ("welcome")->with(compact('categoria'));
    
    }
 }
+ 

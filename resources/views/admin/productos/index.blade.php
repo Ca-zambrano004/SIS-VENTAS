@@ -29,12 +29,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                  @foreach($producto as $productos)
+                  @foreach($producto as $num => $productos)
                     <tr>
-                        <td>{{ $productos->id }}</td>
-                        <td>{{$productos->nombre }}</td>
-                        <td>{{$productos->descripcion }}</td>
-                        <td>{{$productos->category ? $productos->category->nombre: 'General' }}</td>
+                        <td>{{ $num+1 }}</td>
+                        <td>{{ $productos->nombre }}</td>
+                        <td>{{ $productos->descripcion }}</td>
+                        <td>{{ $productos->category ? $productos->category->nombre: 'General' }}</td>
                         <td>${{ $productos->precio }}</td>
                         <td class="td-actions text-right">
                         
@@ -42,7 +42,7 @@
                             <form method="post" action="{{ url('/admin/productos/'.$productos->id.'/delete') }}">
                                 @csrf
                               <div class="btn-group">
-                                <a type="button" rel="tooltip" title="Ver Producto" class="btn btn-info btn-simple btn-xs">
+                                <a href="{{ url('/productos/'.$productos->id)}}" rel="tooltip" title="Ver Producto" class="btn btn-info btn-simple btn-xs" target="_blank">
                                   <i class="fa fa-info"></i>
                                 </a>
                                 <a href="{{ url('/admin/productos/'.$productos->id.'/imagenes') }}"type="button" rel="tooltip" title="Ver Imagenes del Producto" class="btn btn-warning btn-simple btn-xs">
@@ -62,7 +62,13 @@
                   @endforeach 
                 </tbody>
             </table>
-              {{$producto->links() }}
+          <nav aria-label="Page navigation ">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a> {{ $producto->links() }} </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>

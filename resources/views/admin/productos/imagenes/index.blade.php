@@ -28,7 +28,7 @@
                       <img class="card-img-top" src="{{$imagenes->url}}" rel="nofollow" >
                           <div class="card-body">
                             <form method="post" action="">
-                                @csrf
+                                @csrf 
                                 @method ('DELETE')
                                 <input type="hidden" name="image_id" value="{{ $imagenes->id}}">
                               <button type="" class="btn btn-success btn-danger btn-round">Eliminar imagenes</button>

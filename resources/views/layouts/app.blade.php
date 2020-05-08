@@ -27,7 +27,7 @@
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="{{ url('/')}}">
-          <font SIZE=9 FACE="times new roman">SofySHOP</font>
+          <font SIZE=9 FACE="times new roman">Aeroshop</font>
        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>

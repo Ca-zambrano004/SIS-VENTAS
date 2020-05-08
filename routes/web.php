@@ -17,15 +17,12 @@ Route::get('/productos', 'ProductoController@index'); //mostrar productos al cli
 Route::get('/categorias/{categoria}', 'CategoryController@show'); //mostrar categorias
 Route::get('/cuenta', 'CuentaController@index');
 
-
 Route::post('/cart', 'CartDetailController@store'); //gestionar carrito de compras
 Route::delete('/cart', 'CartDetailController@destroy'); //elim. produ. de carrito de compras
 
 Route::post('/orden', 'CartController@update'); //gestionar compras
 
 Route::post('/orden', 'CartController@update'); //gestionar compras
-Route::post('/orden', 'CartController@update'); //gestionar compras
-
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group(function () {
 

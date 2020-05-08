@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Bienvenidos a SofySHOP')
+@section('title', 'Bienvenidos a Aeroshop')
 
 @section('body-class', 'profile-page ')
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'SofySHOP | Dashboard')
+@section('title', 'Aeroshop | Dashboard')
 
 @section('body-class', 'profile-page ')
 

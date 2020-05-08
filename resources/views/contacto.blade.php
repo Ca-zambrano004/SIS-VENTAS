@@ -17,7 +17,7 @@
                <font SIZE=4 FACE="times new roman" align="center" color="#5A5655">Tu opinión es muy importante, por eso trabajamos para mejorar cada día.</font>
             </div>
             </div>
-            <h4 class="text-center description">Para SofySHOP es muy importante conocer la percepción de servicio que tienen nuestros clientes sobre los diferentes productos que ofrecemos..
+            <h4 class="text-center description">Para Aeroshop es muy importante conocer la percepción de servicio que tienen nuestros clientes sobre los diferentes productos que ofrecemos..
             </h4>
             <form class="contact-form">
               <div class="row">

@@ -22,7 +22,6 @@ Route::post('/cart', 'CartDetailController@store'); //gestionar carrito de compr
 Route::delete('/cart', 'CartDetailController@destroy'); //elim. produ. de carrito de compras
 
 Route::post('/orden', 'CartController@update'); //gestionar compras
-Route::post('/carlos', 'CartController@update'); //gestionar compras
 
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group(function () {

@@ -23,6 +23,8 @@ Route::delete('/cart', 'CartDetailController@destroy'); //elim. produ. de carrit
 
 Route::post('/orden', 'CartController@update'); //gestionar compras
 
+Route::post('/orden', 'CartController@update'); //gestionar compras
+
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group(function () {
 

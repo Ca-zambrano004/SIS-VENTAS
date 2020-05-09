@@ -28,6 +28,8 @@ class ContactoController extends Controller
          //Receptor 
          $message->to(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
       });
+
+      dd(env('MAIL_USERNAME'));
       return view("success");
    }
    /**   public function show()

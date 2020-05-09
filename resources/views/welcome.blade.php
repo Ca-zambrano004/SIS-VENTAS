@@ -3,6 +3,7 @@
 @section('title', 'Bienvenidos a Aeroshop')
 
 @section('body-class', 'landing-page')
+
 @section ('estilos')
     <style>
       .team .row .col-md-4{

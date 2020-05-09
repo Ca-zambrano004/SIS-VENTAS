@@ -28,4 +28,9 @@ class ContactoController extends Controller
       });
       return view("success");
    }
+   public function show()
+   {
+
+      return view("success");
+   }
 }

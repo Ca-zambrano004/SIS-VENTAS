@@ -8,6 +8,7 @@ Route::get('/busquedas', 'SearchController@show'); //Buscar productos
 Route::get('productos/json', 'SearchController@data'); //Buscar productos
 
 Route::get('/contacto', 'ContactoController@index');
+Route::get('/send', 'ContactoController@send');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -46,18 +47,3 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group
 	Route::post('/categorias/{categoria}/delete', 'CategoryController@destroy'); //furmulario de eliminacion
 
 });
-
-
-Route::get('enviar', ['as' => 'enviar', function () {
-
-	$data = ['link' => 'http://styde.net'];
-
-	\Mail::send('emails.notificacion', $data, function ($message) {
-
-		$message->from('email@styde.net', 'Styde.Net');
-
-		$message->to('user@example.com')->subject('Notificación');
-	});
-
-	return "Se envío el email";
-}]);

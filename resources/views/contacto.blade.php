@@ -19,41 +19,52 @@
             </div>
             <h4 class="text-center description">Para Aeroshop es muy importante conocer la percepción de servicio que tienen nuestros clientes sobre los diferentes productos que ofrecemos..
             </h4>
+            @if($errors->any())
+            <div class="alert alert-danger">
+              <ul>
+                @foreach($errors ->all() as $error)
+                  <li> {{ $error }} </li>
+            @endforeach
+              </ul>
+            </div>
+          @endif
+          <form method="post" action="{{url('/send')}}" enctype="multipart/form-data">
+            @csrf
             <form class="contact-form">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating">Nombre</label>
-                    <input  class="form-control" type="text" required="" maxlength="40">
+                    <input  class="form-control" name="nombre" type="text" required="" maxlength="40">
                   </div>
                  </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating">Telefono</label>
-                    <input type="number" pattern="[0-9+]{1,15}" class="form-control">
+                    <input type="number" name="telefono" pattern="[0-9+]{1,15}" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating">Correo electronico</label>
-                    <input type="email" class="form-control" required="" maxlength="40">
+                    <input type="email" name="email" class="form-control" required="" maxlength="40">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating">Asunto</label>
-                    <input  class="form-control" type="text" required="" maxlength="40">
+                    <input  class="form-control" name="asunto" type="text" required="" maxlength="40">
                   </div>
                  </div>
               </div>
-              Ingresa a más tutoriales en <a href="{{ $link ?? '' }}">{{ $link ?? '' }}</a>
               <div class="form-group">
                 <label for="exampleMessage" class="bmd-label-floating">Mensaje...</label>
-                <textarea type="text" class="form-control" rows="4" id="exampleMessage" required="">Cordial saludo! </textarea>
+                <textarea type="text" name="mensaje"  class="form-control" rows="4" id="exampleMessage" required="">Cordial saludo! </textarea>
               </div>
               <div class="row">
                 <div class="col-md-4 ml-auto mr-auto text-center">
-                  <button class=" btn btn-primary btn-raised" >
+                  <form action=""></form>
+                  <button type="submit" class=" btn btn-primary btn-raised">
                     ENVIAR MENSAJE
                   </button>
                 </div>

@@ -18,7 +18,7 @@ class ContactoController extends Controller
       $data = $request->all();
       Mail::send('emails.contacto', $data, function ($message) use ($request) {
          //Remitente
-         $message->from($request->nombre, $request->telefono, $request->emai);
+         $message->from($request->nombre, $request->telefono, $request->email);
 
          //Asunto
          $message->subject($request->asunto, $request->mensaje);

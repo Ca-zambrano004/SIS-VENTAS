@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Console\Presets\React;
+use App\Http\Controllers\Controller;
+use App\Mail\OrderShipped;
+use App\Order;
 use Illuminate\Http\Request;
-use Illuminate\Support\facades\Mail;
-
+use Illuminate\Support\Facades\Mail;
 
 class ContactoController extends Controller
 {

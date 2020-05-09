@@ -6,6 +6,7 @@ use Illuminate\Foundation\Console\Presets\React;
 use Illuminate\Http\Request;
 use Illuminate\Support\facades\Mail;
 
+
 class ContactoController extends Controller
 {
    public function index()
@@ -28,9 +29,9 @@ class ContactoController extends Controller
       });
       return view("success");
    }
-   public function show()
+   /**   public function show()
    {
 
       return view("success");
-   }
+   }*/
 }

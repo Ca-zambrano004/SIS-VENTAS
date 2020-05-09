@@ -28,7 +28,7 @@
               </ul>
             </div>
           @endif
-          <form method="post" action="{{url('/send')}}" enctype="multipart/form-data">
+          <form method="post" action="{{url('/contact')}}">
             @csrf
             <form class="contact-form">
               <div class="row">

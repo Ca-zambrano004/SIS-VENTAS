@@ -15,10 +15,10 @@ class ContactoController extends Controller
 
       return view("contacto");
    }
-   public function send(Request $request)
+   public function contact(Request $request)
    {
       $data = $request->all();
-      Mail::send('emails.contacto', $data, function ($message) use ($request) {
+      Mail::send('emails.email', $data, function ($message) use ($request) {
          //Remitente
          $message->from($request->nombre, $request->telefono, $request->email);
 

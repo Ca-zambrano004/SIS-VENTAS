@@ -28,7 +28,7 @@
               </ul>
             </div>
           @endif
-          <form method="post" action="{{url('/contact')}}">
+          <form method="post" action="{{url ('/send')}}">
             @csrf
             <form class="contact-form">
               <div class="row">
@@ -64,7 +64,7 @@
               <div class="row">
                 <div class="col-md-4 ml-auto mr-auto text-center">
                   <form action=""></form>
-                  <button type="submit" class=" btn btn-primary btn-raised">
+                  <button type="submit" name="send" class=" btn btn-primary btn-raised">
                     ENVIAR MENSAJE
                   </button>
                 </div>

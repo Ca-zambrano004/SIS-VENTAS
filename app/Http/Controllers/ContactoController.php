@@ -2,38 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Mail\OrderShipped;
-use App\Order;
 use Illuminate\Http\Request;
+use App\Mail\SendMail;
 use Illuminate\Support\Facades\Mail;
+
 
 class ContactoController extends Controller
 {
    public function index()
    {
-
       return view("contacto");
    }
-   public function contact(Request $request)
+   public function send(Request $request)
    {
-      $data = $request->all();
-      Mail::send('emails.email', $data, function ($message) use ($request) {
-         //Remitente
-         $message->from($request->nombre, $request->telefono, $request->email);
+      $this->validate($request, [
+         'nombre'     =>  'required',
+         'telefono'     =>  'required|numeric|min:5',
+         'email'  =>  'required|email',
+         'mensaje' =>  'required',
+         'asunto' =>  'required'
+      ]);
 
-         //Asunto
-         $message->subject($request->asunto, $request->mensaje);
+      $data = array(
+         'nombre'      =>  $request->input('nombre'),
+         'telefono'      =>  $request->input('telefono'),
+         'email'      =>  $request->input('email'),
+         'asunto'      =>  $request->input('asunto'),
+         'mensaje'   =>   $request->input('mensaje')
+      );
 
-         //Receptor 
-         $message->to(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
-      });
+      $email = $request->input('email');
 
-      return view("success");
+      Mail::to($email)->send(new SendMail($data));
+
+      return view('emails.success');
    }
-   /**   public function show()
-   {
-
-      return view("success");
-   }*/
 }

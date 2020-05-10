@@ -8,8 +8,8 @@ Route::get('/busquedas', 'SearchController@show'); //Buscar productos
 Route::get('productos/json', 'SearchController@data'); //Buscar productos
 
 Route::get('/contacto', 'ContactoController@index');
-Route::post('/contacto', 'ContactoController@contact');
-Route::get('/success', 'ContactoController@show');
+Route::post('/send', 'ContactoController@send');
+//Route::get('/success', 'ContactoController@show');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

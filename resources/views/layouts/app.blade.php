@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset ('assets/img/apple-icon.png') }}">
-  <link rel="icon" type="image/png" href="{{ asset ('assets/img/favicon.png') }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset ('assets/img/pintura.png') }}">
+  <link rel="icon" type="image/png" href="{{ asset ('assets/img/pintura.png') }}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     @yield('title', 'Aeroshop')
@@ -27,7 +27,8 @@
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="{{ url('/')}}">
-          <font SIZE=9 FACE="times new roman">Aeroshop</font>
+         <!-- <img src="{{ asset ('assets/img/Aeromat.gif') }}" alt="Aeromat" class="img-responsive" width="70%">-->
+          <font SIZE=16 FACE="times new roman"><b>Aeroshop</b></font>
        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -41,12 +42,12 @@
      
           @guest
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('login') }}">{{ __('INGRESAR') }}</a>
+              <a class="nav-link" href="{{ route('login') }}"> {{ __('INGRESAR') }} </a>
             </li>
             
           @if (Route::has('register'))
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('register') }}">{{ __('REGISTRO') }}</a>
+              <a class="nav-link" href="{{ route('register') }}"> {{ __('REGISTRO') }} </a>
             </li>
           @endif
 
@@ -103,7 +104,7 @@
             </li>
           @endguest
           <li class="nav-item">
-             <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/contacto') }}"data-original-title="contacto">{{ __('Contacto') }}</a>
+             <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/contacto') }}" data-original-title="Contacto"> {{ __('Contacto') }}</a>
           </li> 
         </ul>
       </div>

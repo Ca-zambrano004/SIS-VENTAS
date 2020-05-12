@@ -10,7 +10,7 @@
   <div class="main main-raised">
       <div class="section section-contacts">
         <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
+          <div class="col-md-6 ml-auto mr-auto">
             <div class="info">
             <div class="icon icon-info" align="center">
                <i class="material-icons" >contact_mail</i> <br><font SIZE=10 FACE="times new roman" align="center" color="#5A5655">Contactanos</font><br>

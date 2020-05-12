@@ -6,7 +6,7 @@
 
 @section('contenido')
 
-<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ asset ('assets/img/home1.png') }}')">
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ asset ('assets/img/home.jpg') }}')">
   </div>
   <div class="main main-raised">
     <div class="container">

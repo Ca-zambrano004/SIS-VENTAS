@@ -42,13 +42,13 @@
               </div>   
               <div class="form-group label-floating">
               <label class="control-label" >Imagen de la categoria</label>
-             <textarea class="form-control" placeholder="Descripción completa de la categoria" rows="4" name="descripcion">{{ old('descripcion', $categoria->descripcion) }}"</textarea><br>
+            <textarea class="form-control" placeholder="Descripción completa de la categoria" rows="4" name="descripcion">{{ old('descripcion', $categoria->descripcion) }}"</textarea><br>
             <button class="btn btn-success">Guardar Categoria</button>
             <a href="{{url('/admin/categorias/') }}" class="btn btn-default">Cancelar</a>
-           </div>
-         </form>
+          </div>
+        </form>
       </div>
-     </div>
+    </div>
     </div>
 
 @include('includes.footer')

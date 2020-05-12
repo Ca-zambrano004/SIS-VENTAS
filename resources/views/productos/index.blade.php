@@ -6,8 +6,8 @@
 
 @section('contenido')
 
-<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ asset ('assets/img/home1.png') }}')">
-  </div>
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ asset ('assets/img/home.jpg') }}')">
+</div>
   <div class="main main-raised">
     <div class="container">
       <div align='center'>
@@ -54,7 +54,6 @@
                                 <a href="{{ url('/productos/'.$productos->id)}}" rel="tooltip" title="Ver Producto" class="btn btn-info btn-simple btn-xs" target="_blank">
                                   <i class="fa fa-info"></i>
                                 </a>
-
                             </div>
                           </form>
                             </div>

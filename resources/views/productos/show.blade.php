@@ -45,12 +45,15 @@
               <p>{{ $Producto->long_descripcion }}</p>
             </div>
           </div>
+
             <div class="col-md-12"> 
-             <button class="btn btn-info btn-round" data-toggle="modal" data-target="#ModalAddToCart">
-              <i class="material-icons">add</i> Añadir al carrito de compras
-            </button>
-               <a href="{{ url('/productos')}}" class="btn btn-default btn-simple btn-round">Volver al listado de productos</a>
-              <hr>
+              @if ($categoria->imagen)
+              <button class="btn btn-info btn-round" data-toggle="modal" data-target="#ModalAddToCart">
+                <i class="material-icons">add</i> Añadir al carrito de compras
+              </button>
+                <a href="{{ url('/productos')}}" class="btn btn-default btn-simple btn-round">Volver al listado de productos</a>
+              @endif
+            <hr>
             <div class="row">
               @foreach($imagen as $imagenes)
                 <div class="col-md-4"> 

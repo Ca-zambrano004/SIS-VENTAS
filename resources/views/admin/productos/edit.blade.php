@@ -13,6 +13,15 @@
       <div class="section text-center">
         <h2 class="title">Editar Producto</h2>
       </div>
+      @if($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+          @foreach($errors ->all() as $error)
+            <li> {{ $error }} </li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
         <form method="post" action="{{url('/admin/productos/'.$producto->id.'/edit') }}">
           @csrf
         <div class="row">

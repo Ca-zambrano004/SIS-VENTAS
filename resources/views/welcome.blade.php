@@ -58,7 +58,7 @@
                   <i class="material-icons">verified_user</i>
                 </div>
                 <h4 class="info-title">Seguridad, de principio a fin</h4>
-                <p>¿No te gusta? ¡Devuélvelo! Aeroshop, no hay nada que no puedas hacer, porque todas tus compras estan siempre protegidas..</p>
+                <p>¿No te gusta? ¡Devuélvelo! Aeroshop, no hay nada que no puedas hacer, porque todas tus compras estan siempre protegidas.</p>
               </div>
             </div>
             <div class="col-md-4">
@@ -67,7 +67,7 @@
                   <i class="material-icons">add_shopping_cart</i>
                 </div>
                 <h4 class="info-title">Envio Gratis</h4>
-                <p>Con solo estar registrado en Aeroshop, tienes envíos gratis en todos nuestros productos con compras efectivas desde $100.000 pesos..</p>
+                <p>Con solo estar registrado en Aeroshop, tienes envíos gratis en todos nuestros productos con compras efectivas desde $150.000 pesos.</p>
               </div>
             </div>
           </div>                

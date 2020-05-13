@@ -15,7 +15,7 @@
                     </ul>
                   </div>
                 @endif
-                 <form method="POST" action="{{ route('register') }}">
+                <form method="POST" action="{{ route('register') }}">
                         @csrf
                   <div class="card-header card-header-primary text-center">
                     <h4 class="card-title">REGISTRO DE USUARIO</h4>

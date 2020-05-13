@@ -47,15 +47,16 @@
           </div>
 
             <div class="col-md-12"> 
-              @if ($categoria->imagen)
+            @if (Auth::check())
               <button class="btn btn-info btn-round" data-toggle="modal" data-target="#ModalAddToCart">
                 <i class="material-icons">add</i> Añadir al carrito de compras
               </button>
                 <a href="{{ url('/productos')}}" class="btn btn-default btn-simple btn-round">Volver al listado de productos</a>
+              
               @endif
             <hr>
             <div class="row">
-              @foreach($imagen as $imagenes)
+          @foreach($imagen as $imagenes)
                 <div class="col-md-4"> 
                   <div class="card" style="width: 20rem;">
                       <img class="card-img-top" src="{{$imagenes->url}}" rel="nofollow" >
@@ -63,10 +64,10 @@
                           </div>
                     </div>
                 </div>
-             @endforeach
+          @endforeach
           </div>
       </div>
-     </div>
+    </div>
     </div>
   </div>
 </div>
@@ -83,7 +84,7 @@
         <form method="post" action="{{ url('/cart')}}">
           @csrf
           <input type="hidden" name="producto_id" value="{{ $Producto->id }}">
-           <div class="modal-body">
+          <div class="modal-body">
           <input type="number" name="cantidad" value="1" class="form-control">
         </div>
         <div class="modal-footer">

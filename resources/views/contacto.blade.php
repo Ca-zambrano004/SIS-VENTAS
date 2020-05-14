@@ -37,7 +37,7 @@
                     <label class="bmd-label-floating">Nombre</label>
                     <input  class="form-control" name="nombre" type="text" required="" maxlength="40">
                   </div>
-                 </div>
+                </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating">Telefono</label>
@@ -55,7 +55,7 @@
                     <label class="bmd-label-floating">Asunto</label>
                     <input  class="form-control" name="asunto" type="text" required="" maxlength="40">
                   </div>
-                 </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="exampleMessage" class="bmd-label-floating">Mensaje...</label>

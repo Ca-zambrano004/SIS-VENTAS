@@ -10,6 +10,13 @@ class Cart extends Model
 	{
 		// CarDetalles tiene muchos producto 
 		return $this->hasMany(CartDatail::class);
-
+	}
+	public function getTotalAttribute()
+	{
+		$total = 0;
+		foreach ($this->detalles as $detalle) {
+			$total += $detalle->cantidad * $detalle->producto->precio;
+		}
+		return $total;
 	}
 }

@@ -9,7 +9,6 @@ Route::get('productos/json', 'SearchController@data'); //Buscar productos
 
 Route::get('/contacto', 'ContactoController@index');
 Route::post('/send', 'ContactoController@send');
-//Route::get('/success', 'ContactoController@show');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -23,8 +22,7 @@ Route::post('/cart', 'CartDetailController@store'); //gestionar carrito de compr
 Route::delete('/cart', 'CartDetailController@destroy'); //elim. produ. de carrito de compras
 
 Route::post('/orden', 'CartController@update'); //gestionar compras
-
-Route::post('/orden', 'CartController@update'); //gestionar compras
+Route::post('/orden', 'CartController@email'); //gestionar compras
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group(function () {
 

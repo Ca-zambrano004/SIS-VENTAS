@@ -5,41 +5,29 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\OrdenPedido;
 use Illuminate\Support\Facades\Mail;
+use App\User;
+use App\Cart;
 
 class CartController extends Controller
 {
+  public function email(User $user, Cart $cart)
+  {
+    Mail::to('Aeroshop@gmail.com')->send(new OrdenPedido($user, $cart));
+
+
+    $cart = auth()->user()->cart;
+    $cart->estado = 'Pendiente';
+    $cart->save();
+    $notificacion = 'El pedido se ha enviado de manera satisfactoria.';
+    return back()->with(compact('notificacion'));
+  }
+
+
   public function update()
   {
     $cart = auth()->user()->cart;
     $cart->estado = 'Pendiente';
     $cart->save();
-
-    $notificacion = 'Su pedido fue registrado de manera satisfactoria. Te contactaremos via Email';
-    return back()->with(compact('notificacion'));
-  }
-
-  public function email(Request $request)
-  {
-    $this->validate($request, [
-      'nombre'     =>  'required',
-      'telefono'     =>  'required|numeric|min:5',
-      'email'  =>  'required|email',
-      'mensaje' =>  'required',
-      'asunto' =>  'required'
-    ]);
-
-    $data = array(
-      'nombre'      =>  $request->input('nombre'),
-      'telefono'      =>  $request->input('telefono'),
-      'email'      =>  $request->input('email'),
-      'asunto'      =>  $request->input('asunto'),
-      'mensaje'   =>   $request->input('mensaje')
-    );
-
-    $email = $request->input('email');
-
-    Mail::to($nombre, $email)->send(new OrdenPedido($data));
-
     return back();
   }
 }

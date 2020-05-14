@@ -94,7 +94,9 @@
                         @endforeach  
                     </tbody>
                 </table>
+                <p>
                     <h4> <b> TOTAL A PAGAR:</b> {{ auth()->user()->cart->total }}</h4>
+                </p>
                 <div class="text-center">  
                     <form method="post" action="{{ url ('/orden') }}"> 
                         @csrf

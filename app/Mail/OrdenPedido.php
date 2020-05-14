@@ -6,15 +6,17 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Cart;
 use App\User;
+use App\Cart;
 
-class ordenPedido extends Mailable
+class OrdenPedido extends Mailable
 {
     use Queueable, SerializesModels;
 
+
     public $user;
     public $cart;
+
     /**
      * Create a new message instance.
      *
@@ -22,8 +24,8 @@ class ordenPedido extends Mailable
      */
     public function __construct(User $user, Cart $cart)
     {
-        $this->User = $user;
-        $this->Cart = $cart;
+        $this->user = $user;
+        $this->user = $cart;
     }
 
     /**

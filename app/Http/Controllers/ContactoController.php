@@ -23,7 +23,7 @@ class ContactoController extends Controller
          'asunto' =>  'required'
       ]);
 
-      $data = array(
+      $datos = array(
          'nombre'      =>  $request->input('nombre'),
          'telefono'      =>  $request->input('telefono'),
          'email'      =>  $request->input('email'),
@@ -33,7 +33,7 @@ class ContactoController extends Controller
 
       $email = $request->input('email');
 
-      Mail::to($email)->send(new SendMail($data));
+      Mail::to($email)->send(new SendMail($datos));
 
       return view('emails.success');
    }

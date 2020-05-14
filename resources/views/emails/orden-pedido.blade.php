@@ -29,27 +29,7 @@
 
 </head>
 <body itemscope itemtype="http://schema.org/EmailMessage" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #f6f6f6; margin: 0;" bgcolor="#f6f6f6">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="em_full_wrap" align="center"  bgcolor="#efefef">
-        <tr>
-        <td align="center" valign="top"><table align="center" width="650" border="0" cellspacing="0" cellpadding="0" class="em_main_table" style="width:650px; table-layout:fixed;">
-            <tr>
-                <td align="center" valign="top" style="padding:0 25px;" class="em_aside10"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                <tr>
-                    <td height="26" style="height:26px;" class="em_h20">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="center" valign="top"><a href="#" target="_blank" style="text-decoration:none;"><img src="/assets/pilot/images/templates/header_logo.png" width="208" height="41" alt="meowgun" border="0" style="display:block; font-family:Arial, sans-serif; font-size:18px; line-height:25px; text-align:center; color:#1d4685; font-weight:bold; max-width:208px;" class="em_w150" /></a></td>
-                </tr>
-                <tr>
-                    <td height="28" style="height:28px;" class="em_h20">&nbsp;</td>
-                </tr>
-                </table>
-                </td>
-            </tr>
-            </table>
-        </td>
-        </tr>
-    </table>
+
     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="em_full_wrap" align="center" bgcolor="#efefef">
         <tr>
         <td align="center" valign="top" class="em_aside5"><table align="center" width="650" border="0" cellspacing="0" cellpadding="0" class="em_main_table" style="width:650px; table-layout:fixed;">
@@ -59,7 +39,7 @@
                     <td height="25" style="height:25px;" class="em_h10">&nbsp;</td>
                 </tr>
                 <tr>
-                <td valign="top" align="center"><img src="{{ asset ('assets/img/Aeromat.gif') }}" width="380" height="200" class="em_full_img2" alt="Alt tag goes here" border="0" style="display:block; max-width:380px; font-family:Arial, sans-serif; font-size:17px; line-height:20px; color:#000000; font-weight:bold;" /></td>
+                <td valign="top" align="center"><img src="{{ asset ('assets/img/Aeromat.gif') }}" width="280" height="100" class="em_full_img2" alt="Alt tag goes here" border="0" style="display:block; max-width:380px; font-family:Arial, sans-serif; font-size:17px; line-height:20px; color:#000000; font-weight:bold;" /></td>
                 </tr>
                 <tr>
                     <td height="22" style="height:22px;" class="em_h20">&nbsp;</td>
@@ -68,23 +48,8 @@
                     <td class="em_blue em_font_22" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 26px; line-height: 29px; color:#264780; font-weight:bold;">Nuevo Pedido</td>
                 </tr>
                 <tr>
-                    <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 22px; color:#434343;"><strong>Order #:</strong> <span style="color:#da885b; text-decoration:underline;">123456789</span> <span class="em_hide2">&nbsp;|&nbsp;</span><span class="em_mob_block"></span> <strong>Order Date:</strong> October 29, 2019</td>
+                    <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 22px; color:#434343;"><span class="em_hide2"></span><span class="em_mob_block"></span> <strong>Order Date:</strong> October 29, 2019</td>
                 </tr>
-                <tr>
-                    <td height="20" style="height:20px; font-size:1px; line-height:1px;">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="center" valign="top"><table width="145" style="width:145px; background-color:#6bafb2; border-radius:4px;" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#6bafb2">
-                    <tr>
-                        <td class="em_white" height="42" align="center" valign="middle" style="font-family: Arial, sans-serif; font-size: 16px; color:#ffffff; font-weight:bold; height:42px;"><a href="https://www.mailgun.com" target="_blank" style="text-decoration:none; color:#ffffff; line-height:42px; display:block;">Order Status</a></td>
-                    </tr>
-                    </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td height="40" style="height:40px;" class="em_h10">&nbsp;</td>
-                </tr>
-                </table>
                 </td>
             </tr>
             <tr>
@@ -97,29 +62,27 @@
                     <td height="35" style="height:35px;" class="em_h10">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 18px; line-height: 22px; color:#434343; font-weight:bold;">BILLED TO:</td>
+                    <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 18px; line-height: 22px; color:#434343; font-weight:bold;">DATOS DEL CLIENTE:</td>
                 </tr>
                 <tr>
                     <td height="10" style="height:10px; font-size:1px; line-height:1px;">&nbsp;</td>
                 </tr>
 
                 <tr>
-                    <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; color:#434343;">Fluffy McFluffers<br />
-                    XXXX XXXXXXX XX<br />
-                    XXXXXX, XX XXXXX</td>
+                <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; color:#434343;">Nombre: {{$user->name}}<br />
+                    Telefono: {{$user->telefono}}<br />
+                    Correo: {{$user->email}}<br />
+                    Dirección:{{$user->dirrecion}} </td>
                 </tr>
                 <tr>
                     <td height="20" style="height:20px; font-size:1px; line-height:1px;">&nbsp;</td>
                 </tr>
-
                 <tr>
-                    <td height="1" bgcolor="#efefef" style="height:1px; background-color:#efefef; font-size:0px; line-height:0px;"><img src="/assets/pilot/images/templates/spacer.gif" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                    <td height="1" bgcolor="#efefef" style="height:1px; background-color:#efefef; font-size:0px; line-height:0px;"><img src="{{ asset ('assets/img/aeromat.jpg') }}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
                 </tr>
-
                 <tr>
                     <td height="25" class="em_h20" style="height:25px; font-size:1px; line-height:1px;">&nbsp;</td>
                 </tr>
-
                 <tr>
                     <td valign="top" align="center">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
@@ -127,7 +90,7 @@
                             <td valign="top">
                                 <table width="120" border="0" cellspacing="0" cellpadding="0" align="left" style="width:120px;" class="em_wrapper">
                                 <tr>
-                                    <td valign="top" align="center"><img src="/assets/pilot/images/templates/cat_2.jpg" width="120" height="120" alt="Alt tag goes here" border="0" style="display:block; max-width:120px; font-family:Arial, sans-serif; font-size:17px; line-height:20px; color:#000000; font-weight:bold;" /></td>
+                                    <td valign="top" align="center"><img src="{{ asset ('assets/img/aeromat.jpg') }}" width="120" height="120" alt="Alt tag goes here" border="0" style="display:block; max-width:120px; font-family:Arial, sans-serif; font-size:17px; line-height:20px; color:#000000; font-weight:bold;" /></td>
                                 </tr>
                                 </table>
                                 <table width="25" border="0" cellspacing="0" cellpadding="0" align="left" style="width:25px;" class="em_hide">
@@ -140,7 +103,7 @@
                                     <td height="16" style="height:16px; font-size:1px; line-height:1px;">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 18px; line-height: 22px; color:#434343; font-weight:bold;">Master Kitty Enterprise Edition</td>
+                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 18px; line-height: 22px; color:#434343; font-weight:bold;">AQUI VA EL NOMBRE DEL PRODUCTO</td>
                                 </tr>
                                 <tr>
                                     <td height="13" style="height:13px; font-size:1px; line-height:1px;">&nbsp;</td>

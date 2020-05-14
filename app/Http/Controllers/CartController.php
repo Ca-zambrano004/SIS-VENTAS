@@ -12,6 +12,8 @@ class CartController extends Controller
 {
   public function email(User $user, Cart $cart)
   {
+
+
     Mail::to('Aeroshop@gmail.com')->send(new OrdenPedido($user, $cart));
 
 

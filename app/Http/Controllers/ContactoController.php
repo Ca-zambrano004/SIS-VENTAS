@@ -32,9 +32,8 @@ class ContactoController extends Controller
       );
 
       $email = $request->input('email');
-      $nombre = $request->input('npmbre');
 
-      Mail::to($nombre, $email)->send(new SendMail($data));
+      Mail::to($email)->send(new SendMail($data));
 
       return view('emails.success');
    }

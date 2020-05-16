@@ -12,10 +12,20 @@ class CartController extends Controller
 {
   public function email(User $user, Cart $cart)
   {
+    $datosUser->user() = array(
+      'name'      => ('nombre'),
+      'telefono'  => ('telefono'),
+      'email'     => ('email'),
+      'dirrecion' => ('direccion')
+    );
+    $datosCart->cart() = array(
+      'name'      => ('nombre'),
+      'telefono'  => ('telefono'),
+      'email'     => ('email'),
+      'dirrecion' => ('direccion')
+    );
 
-
-    Mail::to('Aeroshop@gmail.com')->send(new OrdenPedido($user, $cart));
-
+    Mail::to('Aeroshop@gmail.com')->send(new OrdenPedido($datosUser, $datosCart));
 
     $cart = auth()->user()->cart;
     $cart->estado = 'Pendiente';

@@ -112,7 +112,7 @@
   </nav>
     <div class="wrapper">
 
-      @yield ('contenido')
+      @yield ('content')
     
     </div>
 

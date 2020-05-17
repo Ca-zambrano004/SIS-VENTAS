@@ -46,7 +46,3 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group
 	Route::post('/categorias/{categoria}/delete', 'CategoryController@destroy'); //furmulario de eliminacion
 
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

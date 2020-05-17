@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
-@section('body-class', 'signup-page')
-
 @section('content')
-
-
-<div class="page-header header-filter" style="background-image: url('{{ asset ('assets/img/home.jpg') }}'); background-size: cover; background-position: top center;">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -67,7 +62,4 @@
         </div>
     </div>
 </div>
-</div>
-
-
 @endsection

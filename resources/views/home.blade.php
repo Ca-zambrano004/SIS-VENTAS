@@ -4,7 +4,7 @@
 
 @section('body-class', 'profile-page ')
 
-@section('content')
+@section('contenido')
 
 <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ asset ('assets/img/home.jpg') }}')">
 </div>
@@ -129,7 +129,7 @@
                     </div>
                     <br>
                 </div>
-        
+
                 <table class="table" >
                     <thead>
                     <tr>
@@ -173,6 +173,8 @@
                     </li>
                     </ul>
                 </nav>
+        
+
 
         </div>
     </div>

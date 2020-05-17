@@ -12,7 +12,7 @@
     </style>
 @endsection
 
-@section('content')
+@section('contenido')
 
 <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ asset ('assets/img/home.jpg') }}')">
     <div class="container" >

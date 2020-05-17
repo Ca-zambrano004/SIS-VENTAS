@@ -2,7 +2,7 @@
 
 @section('body-class', 'signup-page')
 
-@section('contenido')
+@section('content')
 
 <div class="page-header header-filter" style="background-image: url('{{ asset ('assets/img/home.jpg') }}'); background-size: cover; background-position: top center;">
   <div class="container">
@@ -35,11 +35,11 @@
                             </span>
                           </div>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email...">
-                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                             @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <br>
                         <div class="input-group">
@@ -49,7 +49,13 @@
                             </span>
                           </div>
                           <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="password...">
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
+
                         <br>
                         <div class="checkbox">
                             <label>
@@ -57,9 +63,18 @@
                                 Recordar sessión
                             </label>
                         </div>
-                        <div class="footer text-center">
-                          <button type="submit" class="btn btn-primary ">Ingresar
-                          </button>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-2 offset-md-3">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Ingresar') }}
+                                </button>
+
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Olvidaste Tu Contraseña?') }}
+                                    </a>
+                                @endif
+                            </div>
                         </div>
                       
                     </div>

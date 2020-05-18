@@ -30,7 +30,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="image-cropper">
-             <img src="{{ $categoria->destacada_image_url}}" alt="Imagen principal de la categoria {{ $categoria->nombre }}" class="rounded" class="img-responsive" >
+                <img src="{{ $categoria->destacada_image_url}}" alt="Imagen principal de la categoria {{ $categoria->nombre }}" class="rounded" class="img-responsive" >
               </div>
               <div class="name">
                   <h3 class="title"><b>NOMBRE DE LA CATEGORIA:</h3> 
@@ -45,14 +45,14 @@
               <p><b>DESCRICPCION: </b>{{ $categoria->descripcion }}</p>
             </div>
             <br>
-        </div>
-     </div>
+            </div>
+          </div>
       <div class="team">
           <div class="row">
             @foreach($Productos as $Producto)
             <div class="col-md-4">
               <div class="team-player">
-                 <img src="{{ $Producto->destacada_image_url}}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                <img src="{{ $Producto->destacada_image_url}}" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                   <h4 class="card-title">  
                     <a href="{{ url('/productos/'.$Producto->id) }}" rel="tooltip" title="Ver Producto">{{$Producto->nombre}}</a>
                       <br>
@@ -66,22 +66,16 @@
             @endforeach
             </div>
           </div>
-         <nav aria-label="Page navigation ">
+        <nav aria-label="Page navigation ">
             <ul class="pagination justify-content-center">
               <li class="page-item">
                 <a> {{ $Productos->links() }} </a>
               </li>
             </ul>
           </nav>
-     
-
-
     </div>
   </div>
 </div>
-
-
-
 
 @include('includes.footer')
 

@@ -95,11 +95,15 @@
                     </tbody>
                 </table>
                 <p>
-                    <h4> <b> TOTAL A PAGAR:</b> {{ auth()->user()->cart->total }}</h4>
+                    <h4> <b> TOTAL A PAGAR:</b> {{ Auth()->user()->cart->total }}</h4>
                 </p>
                 <div class="text-center">  
                     <form method="post" action="{{ url ('/orden') }}"> 
                         @csrf
+                        <input type="hidden" name="idUser" value="{{ Auth()->user()->id
+                        }}">
+                        <input type="hidden" name="valores" value="{{ Auth()->user()}}">
+                           <input type="hidden" name="valores2" value="{{ Auth()->user()->cart->detalles }}">
                         <button class=" btn btn-info btn-round">
                                 <i class="material-icons">done</i> Realizar Pedido
                         </button>

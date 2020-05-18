@@ -10,22 +10,36 @@ use App\Cart;
 
 class CartController extends Controller
 {
-  public function email(User $user, Cart $cart)
+  public function email(Request $request, User $user)
   {
-    $datosUser->user() = array(
+    /*  $datosUser = array(
       'name'      => ('nombre'),
       'telefono'  => ('telefono'),
       'email'     => ('email'),
       'dirrecion' => ('direccion')
-    );
-    $datosCart->cart() = array(
-      'name'      => ('nombre'),
-      'telefono'  => ('telefono'),
-      'email'     => ('email'),
-      'dirrecion' => ('direccion')
-    );
+    ); 
+    $datosUser = [
+      'name' => $user->name,
+      'telefono'  => $user->telefono,
+      'email'     => $user->email,
+      'direccion' => $user->direccion
+    ];
 
-    Mail::to('Aeroshop@gmail.com')->send(new OrdenPedido($datosUser, $datosCart));
+    $datosCart = [
+      'cantidad' => '2'
+    ]; $r = $request->all();
+    dd($r);
+    */
+    $usuarioBuscado = $request['idUser'];
+
+    $user = User::find($usuarioBuscado);
+
+    // $email = $valores['email'];
+
+    //dd($user->email);
+
+    Mail::to($user->email)->send(new OrdenPedido($user));
+
 
     $cart = auth()->user()->cart;
     $cart->estado = 'Pendiente';

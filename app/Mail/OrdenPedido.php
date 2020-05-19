@@ -24,6 +24,7 @@ class OrdenPedido extends Mailable
      */
     public function __construct(User $user)
     {
+        //$this->cart = $cart;
         $this->user = $user;
     }
 

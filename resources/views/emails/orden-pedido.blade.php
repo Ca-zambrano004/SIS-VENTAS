@@ -72,7 +72,7 @@
                 <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; color:#434343;">Nombre: {{$user->name}}<br />
                     Telefono: {{$user->telefono}}<br />
                     Correo: {{$user->email}}<br />
-                    Dirección:{{$user->dirrecion}} </td>
+                    Dirección:{{$user->direccion}} </td>
                 </tr>
                 <tr>
                     <td height="20" style="height:20px; font-size:1px; line-height:1px;">&nbsp;</td>
@@ -89,9 +89,7 @@
                         <tr>
                             <td valign="top">
                                 <table width="120" border="0" cellspacing="0" cellpadding="0" align="left" style="width:120px;" class="em_wrapper">
-                                <tr>
-                                    <td valign="top" align="center"><img src="{{ asset ('assets/img/aeromat.jpg') }}" width="120" height="120" alt="Alt tag goes here" border="0" style="display:block; max-width:120px; font-family:Arial, sans-serif; font-size:17px; line-height:20px; color:#000000; font-weight:bold;" /></td>
-                                </tr>
+                               
                                 </table>
                                 <table width="25" border="0" cellspacing="0" cellpadding="0" align="left" style="width:25px;" class="em_hide">
                                 <tr>
@@ -150,7 +148,7 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" align="right">
                         <tr>
                             <td>&nbsp;</td>
-                            <td class="em_grey" width="100" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px;">Sales Tax </td>
+                            <td class="em_grey" width="100" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px;">Iva 16% </td>
                             <td width="20" style="width:20px; font-size:0px; line-height:0px;"></td>
                             <td width="100" class="em_grey" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px;">$76.50</td>
                         </tr>

@@ -100,10 +100,8 @@
                 <div class="text-center">  
                     <form method="post" action="{{ url ('/orden') }}"> 
                         @csrf
-                        <input type="hidden" name="idUser" value="{{ Auth()->user()->id
-                        }}">
-                        <input type="hidden" name="valores" value="{{ Auth()->user()}}">
-                           <input type="hidden" name="valores2" value="{{ Auth()->user()->cart->detalles }}">
+                        <input type="hidden" name="idUser" value="{{ Auth()->user()->id}}">
+                        <input type="hidden" name="CartDetalle" value="{{ Auth()->user()->cart->detalles }}">
                         <button class=" btn btn-info btn-round">
                                 <i class="material-icons">done</i> Realizar Pedido
                         </button>

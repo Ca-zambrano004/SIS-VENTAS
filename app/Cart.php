@@ -8,7 +8,7 @@ class Cart extends Model
 {
 	public function detalles()
 	{
-		// CarDetalles tiene muchos producto 
+		// Cart tiene muchos CarDetalles
 		return $this->hasMany(CartDatail::class);
 	}
 	public function getTotalAttribute()

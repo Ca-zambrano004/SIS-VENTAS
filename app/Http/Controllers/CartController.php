@@ -16,9 +16,39 @@ class CartController extends Controller
     $usuarioBuscado = $request['idUser'];
     $user = User::find($usuarioBuscado);
 
-    $cart = $request['CartDetalle'];
+    $cartDecode = $request['CartDetalle'];
+    $cart2 = json_decode($cartDecode, true);
 
-    //dd($user, $cart);
+    //dd($user, $cart2);
+
+    $cart = new Cart();
+    $cart->id = $request['CartDetalle'];
+    $cart->cantidad = $request['CartDetalle'];
+    $cart->descuento = $request['CartDetalle'];
+    $cart->cart_id = $request['CartDetalle'];
+    $cart->producto_id = $request['CartDetalle'];
+
+    // dd($user, $cart, $cart2);
+
+
+    /* $cart = new Cart([
+      'id' => $request['CartDetalle'],
+      'cantidad' => $request['CartDetalle'],
+
+      'descuento' => $request->input('card-name'),
+      'cart_id' => $request->input('card-number'),
+      'producto_id' => $request->input('card-expiry-month'),
+      'created_at' => $request->input('card-expiry-year'),
+      'updated_at' => $request->input('card-cvc'),
+    ]);
+*/
+
+
+
+    //$pedido->save();
+
+
+
 
     Mail::to($user->email)->send(new OrdenPedido($user, $cart));
 

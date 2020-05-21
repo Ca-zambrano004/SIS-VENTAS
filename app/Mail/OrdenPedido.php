@@ -13,7 +13,6 @@ class OrdenPedido extends Mailable
 {
     use Queueable, SerializesModels;
 
-
     public $user;
     public $cart;
 
@@ -22,11 +21,12 @@ class OrdenPedido extends Mailable
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(User $user, Cart $cart)
     {
-        //$this->cart = $cart;
+        $this->cart = $cart;
         $this->user = $user;
     }
+
 
     /**
      * Build the message.

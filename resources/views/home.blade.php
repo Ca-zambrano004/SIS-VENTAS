@@ -47,7 +47,7 @@
                         <div class="card">
                             <div class="card-header">
                             <h4 class="card-title" align="center">Tu carrito de compra contiene</h4>
-                            <h4 class="category" align="center"> # {{ auth()->user()->cart->detalles->count() }} Productos.</p>
+                            <h4 class="category" align="center"> # {{ Auth()->user()->cart->detalles->count() }} Productos.</p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (auth()->user()->cart->detalles as $detalles)
+                        @foreach (Auth()->user()->cart->detalles as $detalles)
                         <tr>
                             <td class="text-center">
                             <img src="{{ $detalles->Producto->destacada_image_url}}" height="60">

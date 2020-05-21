@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
 <head>
 <meta name="viewport" content="width=device-width" />
@@ -85,11 +85,12 @@
                 </tr>
                 <tr>
                     <td valign="top" align="center">
+
+                @foreach (Auth()->user()->cart->detalles as $detalles)
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                         <tr>
                             <td valign="top">
                                 <table width="120" border="0" cellspacing="0" cellpadding="0" align="left" style="width:120px;" class="em_wrapper">
-                               
                                 </table>
                                 <table width="25" border="0" cellspacing="0" cellpadding="0" align="left" style="width:25px;" class="em_hide">
                                 <tr>
@@ -101,13 +102,13 @@
                                     <td height="16" style="height:16px; font-size:1px; line-height:1px;">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 18px; line-height: 22px; color:#434343; font-weight:bold;">AQUI VA EL NOMBRE DEL PRODUCTO</td>
+                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 18px; line-height: 22px; color:#434343; font-weight:bold;">{{$detalles->producto->nombre}}</td>
                                 </tr>
                                 <tr>
                                     <td height="13" style="height:13px; font-size:1px; line-height:1px;">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343;">Quantity: <span style="color:#da885b; font-weight:bold;">1</span></td>
+                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343;">Cantidad: <span style="color:#da885b; font-weight:bold;">{{$detalles->cantidad}}</span></td>
                                 </tr>
                                 <tr>
                                     <td height="13" style="height:13px; font-size:1px; line-height:1px;">&nbsp;</td>
@@ -115,11 +116,11 @@
                                 <tr>
                                     <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343;">Amount ($): <span style="color:#da885b; font-weight:bold;">$850</span></td>
                                 </tr>
-
                                 </table>
                             </td>
                         </tr>
                         </table>
+                    @endforeach  
                     </td>
                 </tr>
                 <tr>

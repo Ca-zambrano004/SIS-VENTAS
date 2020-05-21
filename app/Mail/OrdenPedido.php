@@ -20,13 +20,18 @@ class OrdenPedido extends Mailable
      * Create a new message instance.
      *
      * @return void
-     */
+     
     public function __construct(User $user, Cart $cart)
     {
         $this->cart = $cart;
         $this->user = $user;
-    }
+    }*/
 
+    public function __construct(User $user, $cart)
+    {
+        $this->cart = $cart;
+        $this->user = $user;
+    }
 
     /**
      * Build the message.

@@ -1,4 +1,5 @@
-!DOCTYPE html>
+
+<!DOCTYPE html>
 <html  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
 <head>
 <meta name="viewport" content="width=device-width" />
@@ -35,21 +36,18 @@
         <td align="center" valign="top" class="em_aside5"><table align="center" width="650" border="0" cellspacing="0" cellpadding="0" class="em_main_table" style="width:650px; table-layout:fixed;">
             <tr>
                 <td align="center" valign="top" style="padding:0 25px; background-color:#ffffff;" class="em_aside10"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                <tr>
-                    <td height="25" style="height:25px;" class="em_h10">&nbsp;</td>
-                </tr>
-                <tr>
-                <td valign="top" align="center"><img src="{{ asset ('assets/img/Aeromat.gif') }}" width="280" height="100" class="em_full_img2" alt="Alt tag goes here" border="0" style="display:block; max-width:380px; font-family:Arial, sans-serif; font-size:17px; line-height:20px; color:#000000; font-weight:bold;" /></td>
-                </tr>
-                <tr>
-                    <td height="22" style="height:22px;" class="em_h20">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="em_blue em_font_22" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 26px; line-height: 29px; color:#264780; font-weight:bold;">Nuevo Pedido</td>
-                </tr>
-                <tr>
-                    <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 22px; color:#434343;"><span class="em_hide2"></span><span class="em_mob_block"></span> <strong>Order Date:</strong> October 29, 2019</td>
-                </tr>
+                    <tr>
+                        <td height="25" style="height:25px;" class="em_h10">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="center"><img src="{{ asset ('assets/img/Aeromat.gif') }}" width="280" height="100" class="em_full_img2" alt="Alt tag goes here" border="0" style="display:block; max-width:380px; font-family:Arial, sans-serif; font-size:17px; line-height:20px; color:#000000; font-weight:bold;" /></td>
+                    </tr>
+                    <tr>
+                        <td height="22" style="height:22px;" class="em_h20">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="em_blue em_font_22" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 26px; line-height: 29px; color:#264780; font-weight:bold;">Nuevo Pedido</td>
+                    </tr>
                 </td>
             </tr>
             <tr>
@@ -102,25 +100,31 @@
                                     <td height="16" style="height:16px; font-size:1px; line-height:1px;">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 18px; line-height: 22px; color:#434343; font-weight:bold;">{{$detalles->producto->nombre}}</td>
+                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 18px; line-height: 22px; color:#434343; font-weight:bold;">Nombre del Producto <span style="color:#264780; font-weight:bold;">{{$detalles->producto->nombre}}</span></td>
+                                </tr>
+                                <tr>
+                                    <td height="20" style="height:13px; font-size:1px; line-height:1px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="em_grey" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343;">Cantidad: <span style="color:#264780; font-weight:bold;">{{$detalles->cantidad}}</span></td>
                                 </tr>
                                 <tr>
                                     <td height="13" style="height:13px; font-size:1px; line-height:1px;">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343;">Cantidad: <span style="color:#da885b; font-weight:bold;">{{$detalles->cantidad}}</span></td>
+                                    <td class="em_grey" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343;">Precio Producto ($): <span style="color:#264780; font-weight:bold;">{{$detalles->producto->precio }}</span></td>
                                 </tr>
                                 <tr>
-                                    <td height="13" style="height:13px; font-size:1px; line-height:1px;">&nbsp;</td>
+                                    <td height="20" style="height:13px; font-size:1px; line-height:1px;">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td class="em_grey" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343;">Amount ($): <span style="color:#da885b; font-weight:bold;">$850</span></td>
+                                    <td class="em_grey" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343;">Total Producto ($): <span style="color:#264780; font-weight:bold;">{{$detalles->cantidad * $detalles->producto->precio }}</span></td>
                                 </tr>
                                 </table>
                             </td>
                         </tr>
                         </table>
-                    @endforeach  
+                        @endforeach
                     </td>
                 </tr>
                 <tr>
@@ -137,7 +141,7 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" align="right">
                         <tr>
                             <td>&nbsp;</td>
-                            <td class="em_grey" width="100" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px;">Subtotal</td>
+                            <td class="em_grey" width="100" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px;">Subtotal a Pagar</td>
                             <td width="20" style="width:20px; font-size:0px; line-height:0px;"></td>
                             <td width="100" class="em_grey" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px;">$850</td>
                         </tr>
@@ -161,9 +165,9 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" align="right">
                         <tr>
                             <td>&nbsp;</td>
-                            <td class="em_grey" width="100" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px; font-weight:bold;">Total</td>
+                            <td class="em_grey" width="100" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px; font-weight:bold;">Total a Pagar</td>
                             <td width="20" style="width:20px; font-size:0px; line-height:0px;"></td>
-                            <td width="100" class="em_grey" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px; font-weight:bold;">$926.50</td>
+                        <td width="100" class="em_grey" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 20px; color:#434343; width:100px; font-weight:bold;">{{ Auth()->user()->cart->total }}</td>
                         </tr>
                         </table>
                     </td>
@@ -178,6 +182,9 @@
         </td>
         </tr>
     </table>
+
+
+    
     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="em_full_wrap" align="center" bgcolor="#efefef">
         <tr>
         <td align="center" valign="top"><table align="center" width="650" border="0" cellspacing="0" cellpadding="0" class="em_main_table" style="width:650px; table-layout:fixed;">

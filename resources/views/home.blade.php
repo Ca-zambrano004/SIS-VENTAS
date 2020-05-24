@@ -94,9 +94,11 @@
                         @endforeach  
                     </tbody>
                 </table>
-                <p>
-                    <h4> <b> TOTAL A PAGAR:</b> {{ Auth()->user()->cart->total }}</h4>
-                </p>
+                <div class="text-right">  
+                    <h5> <b> Subtotal:</b> {{ ((Auth()->user()->cart->total)-(Auth()->user()->cart->total)*0.19) }}</h5>
+                    <h5> <b> Iva 19%:</b> {{ ((Auth()->user()->cart->total)*0.19) }}</h5>
+                    <h5> <b> TOTAL A PAGAR:</b> {{ Auth()->user()->cart->total }}</h5>
+                </div>  
                 <div class="text-center">  
                     <form method="post" action="{{ url ('/orden') }}"> 
                         @csrf
@@ -176,8 +178,6 @@
                     </ul>
                 </nav>
         
-
-
         </div>
     </div>
     </div>

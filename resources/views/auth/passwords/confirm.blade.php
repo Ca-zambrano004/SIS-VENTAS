@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
+@section('title', 'Confirmar Contraseña')
+
+@section('body-class', 'profile-page ')
+
 @section('content')
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ asset ('assets/img/home.jpg') }}')">
+</div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

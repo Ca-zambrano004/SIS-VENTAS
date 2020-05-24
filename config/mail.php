@@ -138,7 +138,7 @@ return [
     "port" => 2525,
     "from" => array(
         "address" => "Aeroshop@mailtrap.com",
-        "name" => "Contacto"
+        "name" => "Aeromat"
     ),
     "username" => "a67861e5134c17",
     "password" => "c1419ca9017ccd",

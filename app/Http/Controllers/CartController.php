@@ -19,7 +19,7 @@ class CartController extends Controller
     $cartDecode = $request['CartDetalle'];
     $cart = json_decode($cartDecode, true);
 
-    Mail::to($user->email)->send(new OrdenPedido($user, $cart));
+    Mail::to($user->email)->cc($user->email)->send(new OrdenPedido($user, $cart));
 
     $cart = auth()->user()->cart;
     $cart->fecha_orden = Carbon::now()->format('Y-m-d H:i:s');

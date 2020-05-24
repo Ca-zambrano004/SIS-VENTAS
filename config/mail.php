@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org', 'smtp.mailtrap.io'),
 
     /*
     |--------------------------------------------------------------------------
@@ -132,7 +132,7 @@ return [
     */
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
-
+    /*
     "driver" => "smtp",
     "host" => "smtp.mailtrap.io",
     "port" => 2525,
@@ -143,5 +143,5 @@ return [
     "username" => "a67861e5134c17",
     "password" => "c1419ca9017ccd",
     "sendmail" => "/usr/sbin/sendmail -bs"
-
+*/
 ];

@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+
 class UserstableSeeder extends Seeder
 
 {
@@ -14,20 +15,20 @@ class UserstableSeeder extends Seeder
      */
     public function run()
     {
-         DB::table('users')->insert([
+        DB::table('users')->insert([
             'name' => 'carlos zambrano',
             'email' => 'carlos@gmail.com',
             'password' => Hash::make('123'),
-            'rol'=> 1
+            'rol' => 1
 
         ]);
-         DB::table('users')->insert([
+        DB::table('users')->insert([
             'name' => 'carlos zambrano',
             'email' => 'zambrano@gmail.com',
             'password' => Hash::make('123'),
-            'rol'=> false
+            'rol' => false
+
 
         ]);
-        
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AgregarDatosToUsers extends Migration
+class CreateDepartamentosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AgregarDatosToUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('telefono')->nullable();
-            $table->string('direccion')->nullable();
+        Schema::create('departamentos', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nombre');
+            $table->bigInteger('codigo');
+            $table->timestamps();
         });
     }
 
@@ -26,10 +28,6 @@ class AgregarDatosToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn([
-                'telefono', 'direccion'
-            ]);
-        });
+        Schema::dropIfExists('departamentos');
     }
 }

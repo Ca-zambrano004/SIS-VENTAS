@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AgregarDatosToUsers extends Migration
+class AgregarMunicipioToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class AgregarDatosToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('telefono')->nullable();
-            $table->string('direccion')->nullable();
+            $table->unsignedBigInteger('municipio_id')->nullable();
+            $table->foreign('municipio_id')->references('id')->on('municipio');
         });
     }
 
@@ -28,7 +28,7 @@ class AgregarDatosToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn([
-                'telefono', 'direccion'
+                'municipio_id'
             ]);
         });
     }

@@ -10,7 +10,6 @@
         display: inline;
         margin: 0 auto;
         height: 100%;
-        width: auto;
       } 
       .image-cropper {
         height: 120px;

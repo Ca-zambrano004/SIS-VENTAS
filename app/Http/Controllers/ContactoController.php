@@ -33,7 +33,7 @@ class ContactoController extends Controller
 
       $email = $request->input('email');
 
-      Mail::to($email)->send(new SendMail($datos));
+      Mail::to($email)->cc($email)->send(new SendMail($datos));
 
       return view('emails.success');
    }

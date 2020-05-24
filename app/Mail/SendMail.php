@@ -29,6 +29,6 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.message-receive');
+        return $this->view('emails.message-receive')->subject('Un Cliente ha Realizado Una Sugerencia.');
     }
 }

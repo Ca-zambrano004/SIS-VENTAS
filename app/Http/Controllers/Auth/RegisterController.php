@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Http\Request;
@@ -79,7 +80,6 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'municipio_id' => $data['municipio_id'],
             'apellidos' => $data['apellidos'],
-            'foto' => $data['foto'],
         ]);
     }
 }

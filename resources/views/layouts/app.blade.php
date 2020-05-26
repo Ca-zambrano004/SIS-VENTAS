@@ -85,6 +85,12 @@
                  
                   @endif
                   <li>
+                    <a class="dropdown-item" href="{{ url('/cuenta/edit') }}">
+                       Gestionar cuenta
+                    </a>
+                </li>
+
+                  <li>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
@@ -98,7 +104,7 @@
               </ul>
             </li>
             <li class="nav-item">
-                 <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/cuenta') }}"data-original-title="{{ Auth::user()->name }}"> 
+                 <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/cuenta/index') }}"data-original-title="{{ Auth::user()->name }}"> 
                   <img src="{{ asset ('assets/img/avatar.png') }}" alt="Imagen principal de la categoria" class="rounded" class="img-responsive" width="50">    
                  </a>
             </li>

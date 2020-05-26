@@ -16,7 +16,10 @@ Route::get('/productos/{id}', 'ProductoController@show'); //mostrar productos
 Route::get('/productos', 'ProductoController@index'); //mostrar productos al cliente
 
 Route::get('/categorias/{categoria}', 'CategoryController@show'); //mostrar categorias
-Route::get('/cuenta', 'CuentaController@index');
+
+Route::get('/cuenta/index', 'CuentaController@index');//Mostrar datos de la cuenta
+Route::get('/cuenta/edit', 'CuentaController@edit'); //furmulario de edicion
+Route::post('/cuenta/edit', 'CuentaController@update'); //Actualizar datoss de la cuenta
 
 Route::post('/cart', 'CartDetailController@store'); //gestionar carrito de compras
 Route::delete('/cart', 'CartDetailController@destroy'); //elim. produ. de carrito de compras

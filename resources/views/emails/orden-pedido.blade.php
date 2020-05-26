@@ -67,6 +67,7 @@
 
                 <tr>
                 <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; color:#434343;">Nombre: {{$user->name}}<br />
+                    Apellidos: {{$user->apellidos}}<br />
                     Telefono: {{$user->telefono}}<br />
                     Correo: {{$user->email}}<br />
                     Dirección: {{$user->direccion}}<br />
@@ -236,9 +237,9 @@
                 <tr>
                     <td align="center" valign="top"><table border="0" cellspacing="0" cellpadding="0" align="center">
                         <tr>
-                        <td width="30" style="width:30px;" align="center" valign="middle"><a href="#" target="_blank" style="text-decoration:none;"><img src="{{ asset ('assets/img/fb.png') }}"width="30" height="30" alt="Fb" border="0" style="display:block; font-family:Arial, sans-serif; font-size:18px; line-height:25px; text-align:center; color:#000000; font-weight:bold; max-width:30px;" /></a></td>
+                        <td width="30" style="width:30px;" align="center" valign="middle"><a href="#" target="_blank" style="text-decoration:none;"><img src="{{ asset ('assets/img/fbs.png') }}"width="30" height="30" alt="Fb" border="0" style="display:block; font-family:Arial, sans-serif; font-size:18px; line-height:25px; text-align:center; color:#000000; font-weight:bold; max-width:30px;" /></a></td>
                         <td width="12" style="width:12px;">&nbsp;</td>
-                        <td width="30" style="width:30px;" align="center" valign="middle"><a href="#" target="_blank" style="text-decoration:none;"><img src={{ asset ('assets/img/tw.png') }} width="30" height="30" alt="Tw" border="0" style="display:block; font-family:Arial, sans-serif; font-size:14px; line-height:25px; text-align:center; color:#000000; font-weight:bold; max-width:30px;" /></a></td>
+                        <td width="30" style="width:30px;" align="center" valign="middle"><a href="#" target="_blank" style="text-decoration:none;"><img src={{ asset ('assets/img/twer.png') }} width="30" height="30" alt="Tw" border="0" style="display:block; font-family:Arial, sans-serif; font-size:14px; line-height:25px; text-align:center; color:#000000; font-weight:bold; max-width:30px;" /></a></td>
                         <td width="12" style="width:12px;">&nbsp;</td>
                         <td width="30" style="width:30px;" align="center" valign="middle"><a href="#" target="_blank" style="text-decoration:none;"><img src={{ asset ('assets/img/insta.png') }} width="30" height="30" alt="Insta" border="0" style="display:block; font-family:Arial, sans-serif; font-size:14px; line-height:25px; text-align:center; color:#000000; font-weight:bold; max-width:30px;" /></a></td>
                         </tr>

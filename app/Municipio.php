@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Municipio extends Model
 {
-    protected $fillable = ['departamentos_id', 'nombre'];
+    protected $fillable = ['nombre'];
 
     //municipio->usuario
     public function usuario()

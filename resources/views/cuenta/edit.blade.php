@@ -83,7 +83,7 @@
               </div>
 
                   <div class="footer text-center">
-                    <button class="btn btn-success">Guardar Categoria</button>
+                    <button class="btn btn-success">Guardar Cambios</button>
                   </div>
 
             </form>

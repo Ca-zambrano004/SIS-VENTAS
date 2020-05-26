@@ -6,26 +6,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
 {
-	//$producto->category
+    //$producto->category
     public function category()
-    {		
+    {
         //un producto pertenece a una categoria
-    	return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class);
     }
 
- 
+
     //$producto->Imagenes
     public function imagenes()
-    {	// Un producto tiene muchas imagenes
-    	return $this->hasMany(ProductoImagen::class);
+    {    // Un producto tiene muchas imagenes
+        return $this->hasMany(ProductoImagen::class);
     }
 
 
-      public function getDestacadaImageUrlAttribute()
+    public function getDestacadaImageUrlAttribute()
     {   // URL de la Imagen del producto 
-        $destacadaImage = $this -> imagenes()->where('destacada', true)->first();
-        if (!$destacadaImage){
-            $destacadaImage= $this->imagenes()->first();
+        $destacadaImage = $this->imagenes()->where('destacada', true)->first();
+        if (!$destacadaImage) {
+            $destacadaImage = $this->imagenes()->first();
         }
         if ($destacadaImage) {
             return $destacadaImage->url;
@@ -35,5 +35,4 @@ class Producto extends Model
 
         return '/imagenes/default.jpg';
     }
-
 }

@@ -49,7 +49,7 @@
               <div class="form-group">
                 <label class="control-label">Seleccione una categoria</label>
                 <select name="category_id" class="form-control">
-                    <option placeholder="Descripción completa del producto"></option>
+                    <option placeholder="Categorias"></option>
                     @foreach ($category as $categorys)
                       <option value="{{ $categorys->id }}"> {{ $categorys->nombre}} 
                       </option>

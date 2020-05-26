@@ -16,18 +16,18 @@ class UserstableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'carlos zambrano',
-            'email' => 'carlos@gmail.com',
+            'name' => 'Aeromat',
+            'email' => 'Aeroshopsas@gmail.com',
             'password' => Hash::make('123'),
-            'rol' => 1
-
+            'rol' => 1,
+            'apellidos' => 'Aerosoles sas'
         ]);
         DB::table('users')->insert([
             'name' => 'carlos zambrano',
-            'email' => 'zambrano@gmail.com',
+            'email' => 'carlos@gmail.com',
             'password' => Hash::make('123'),
-            'rol' => false
-
+            'rol' => false,
+            'apellidos' => 'Zambrano Lamar'
 
         ]);
     }

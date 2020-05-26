@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Municipio;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -50,11 +51,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255', 'min:8'],
-            'telefono' => ['required', 'string', 'min:8', 'max:13'],
+            'name' => ['required', 'string', 'max:255', 'min:4'],
+            'telefono' => ['required', 'string', 'min:8', 'max:10'],
             'direccion' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'municipio_id' => ['required', 'string'],
+            'apellidos' => ['required', 'string', 'min:8'],
         ]);
     }
 
@@ -72,6 +75,8 @@ class RegisterController extends Controller
             'telefono' => $data['telefono'],
             'direccion' => $data['direccion'],
             'password' => Hash::make($data['password']),
+            'municipio_id' => $data['municipio_id'],
+            'apellidos' => $data['apellidos']
         ]);
     }
 }

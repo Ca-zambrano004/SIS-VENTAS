@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
 <head>
@@ -71,7 +69,10 @@
                 <td class="em_grey" align="center" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; color:#434343;">Nombre: {{$user->name}}<br />
                     Telefono: {{$user->telefono}}<br />
                     Correo: {{$user->email}}<br />
-                    Dirección:{{$user->direccion}} </td>
+                    Dirección: {{$user->direccion}}<br />
+                    Ciudad: {{ $user->municipio_id}} 
+                </td>
+
                 </tr>
                 <tr>
                     <td height="20" style="height:20px; font-size:1px; line-height:1px;">&nbsp;</td>

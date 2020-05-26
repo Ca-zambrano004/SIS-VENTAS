@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'telefono', 'direccion'
+        'name', 'email', 'password', 'telefono', 'direccion', 'municipio_id', 'apellidos'
     ];
 
     /**
@@ -41,14 +41,14 @@ class User extends Authenticatable
 
     public function carts()
     {
-       return $this->hasMany(Cart::class);
+        return $this->hasMany(Cart::class);
     }
 
-        //cart_id
+    //cart_id
     public function getCartAttribute()
     {
         $cart = $this->carts()->where('estado', 'Activo')->first();
-        if($cart)
+        if ($cart)
             return $cart;
 
         //else
@@ -57,9 +57,13 @@ class User extends Authenticatable
         $cart->estado = 'Activo';
         $cart->user_id = $this->id;
         $cart->save();
-        
-        return $cart;
- 
 
+        return $cart;
+    }
+    //Usuario->
+    public function municipio()
+    {
+        //un producto pertenece a una categoria
+        return $this->hasMany(Municipio::class);
     }
 }

@@ -15,7 +15,7 @@
             <div class="info">
             <div class="icon icon-info" align="center">
                <i class="material-icons" >contact_mail</i> <br><font SIZE=10 FACE="times new roman" align="center" color="#5A5655">Mis Datos</font><br>
-               <font SIZE=4 FACE="times new roman" align="center" color="#5A5655">Visializa o actualiza tusdatos personales.</font>
+               <font SIZE=4 FACE="times new roman" align="center" color="#5A5655">Visializa o actualiza tus datos personales.</font>
             </div>
             </div>
             <form class="contact-form">
@@ -40,6 +40,12 @@
                   </div>
                 </div>
                 <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Cuidad de residencia</label>
+                    <input  class="form-control" type="text" required="" maxlength="40"value="{{$User->municipio_id}}">
+                  </div>
+                 </div>
+                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="bmd-label-floating">Dirrecion de residencia</label>
                     <input  class="form-control" type="text" required="" maxlength="40"value="{{$User->direccion}}">

@@ -105,7 +105,7 @@
             </li>
             <li class="nav-item">
                  <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/cuenta/index') }}"data-original-title="{{ Auth::user()->name }}"> 
-                  <img src="{{ asset ('assets/img/avatar.png') }}" alt="Imagen principal de la categoria" class="rounded" class="img-responsive" width="50">    
+                  <img src="{{ 'imagenes/usuarios/'.auth()->user()->foto }}" alt="FotoPerfil" class="rounded" class="img-responsive" width="50">    
                  </a>
             </li>
           @endguest

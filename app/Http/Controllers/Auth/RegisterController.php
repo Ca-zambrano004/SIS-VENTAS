@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
-use App\Municipio;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -57,7 +57,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'municipio_id' => ['required', 'string'],
-            'apellidos' => ['required', 'string', 'min:8'],
+            'apellidos' => ['required', 'string', 'min:8']
         ]);
     }
 
@@ -67,6 +67,8 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
+
+
     protected function create(array $data)
     {
         return User::create([
@@ -76,7 +78,8 @@ class RegisterController extends Controller
             'direccion' => $data['direccion'],
             'password' => Hash::make($data['password']),
             'municipio_id' => $data['municipio_id'],
-            'apellidos' => $data['apellidos']
+            'apellidos' => $data['apellidos'],
+            'foto' => $data['foto'],
         ]);
     }
 }

@@ -17,7 +17,7 @@ Route::get('/productos', 'ProductoController@index'); //mostrar productos al cli
 
 Route::get('/categorias/{categoria}', 'CategoryController@show'); //mostrar categorias
 
-Route::get('/cuenta/index', 'CuentaController@index');//Mostrar datos de la cuenta
+Route::get('/cuenta/index', 'CuentaController@index'); //Mostrar datos de la cuenta
 Route::get('/cuenta/edit', 'CuentaController@edit'); //furmulario de edicion
 Route::post('/cuenta/edit', 'CuentaController@update'); //Actualizar datoss de la cuenta
 

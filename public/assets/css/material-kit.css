@@ -4418,7 +4418,7 @@ tbody.collapse.show {
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;
     line-height: 1;
-    background-color: transparent;
+   background-color: #000000;
     border: 1px solid transparent;
     border-radius: 0.25rem;
 }
@@ -14901,10 +14901,10 @@ textarea {
 }
 
 .navbar.navbar-transparent {
-    background-color: transparent !important;
+    /*background-color: transparent !important;*/
     box-shadow: none;
     padding-top: 25px;
-    color: #ffffff;
+    color: #000000;
 }
 
 #navbar .navbar {
@@ -19038,7 +19038,7 @@ footer .pull-center {
         transform: translate3d(-230px, 0, 0);
     }
 
-    .menu-on-left .navbar .navbar-translate .navbar-brand {
+    .menu-on-left .navbaranslate .navbar-brand {
         position: absolute;
         right: 0;
         top: -15px;

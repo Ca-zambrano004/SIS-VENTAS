@@ -88,7 +88,7 @@
                     <a class="dropdown-item" href="{{ url('/cuenta/edit') }}">
                        Gestionar cuenta
                     </a>
-                </li>
+                  </li>
 
                   <li>
                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -107,11 +107,16 @@
                  <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/cuenta/index') }}"data-original-title="{{ Auth::user()->name }}"> 
                   <img src="{{ asset('imagenes/usuarios/'.Auth()->user()->foto) }}" alt="FotoPerfil" class="rounded" class="img-responsive" width="50">    
                  </a>
-            </li>
+            </li>    
+            <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/home') }}" data-original-title="Carrito">
+              <img src="https://img.icons8.com/wired/50/000000/shopping-cart.png"/>
+            </a>
+         </li> 
           @endguest
           <li class="nav-item">
              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{{url('/contacto') }}" data-original-title="Contacto"> {{ __('Contacto') }}</a>
-          </li> 
+          </li>
         </ul>
       </div>
     </div>

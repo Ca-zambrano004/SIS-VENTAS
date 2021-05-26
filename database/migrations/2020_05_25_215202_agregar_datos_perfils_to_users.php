@@ -14,8 +14,8 @@ class AgregarDatosPerfilsToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('apellidos');
-            $table->string('foto')->nullable();
+            $table->string('apellidos')->nullable();;
+            $table->string('foto');
         });
     }
 
